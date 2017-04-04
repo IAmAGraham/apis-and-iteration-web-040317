@@ -29,13 +29,14 @@ def get_character_movies_from_api(character)
 end
 
 def parse_character_movies(films_hash)
-  character each.do |character|
-  puts "#{character[:results][:name]}: #{character[:results][:films]}"
-  #.parse.with_index(1)
-
-  puts character
-  # some iteration magic and puts out the movies in a nice list
+  films_hash.each do |film|
+    puts "#{film['title']}"
+  end
 end
+
+
+  # some iteration magic and puts out the movies in a nice list
+
 
 def show_character_movies(character)
   films_hash = get_character_movies_from_api(character)
