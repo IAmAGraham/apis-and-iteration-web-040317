@@ -49,7 +49,7 @@ def show_character_movies(character)
   parse_character_movies(films_hash)
 end
 
-binding.pry
+
 
 ## BONUS
 
