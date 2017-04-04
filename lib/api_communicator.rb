@@ -46,9 +46,12 @@ def get_character_movies_from_api(character)
 end
 
 def parse_character_movies(films_hash)
+  puts "*" * 30
+  puts "These are the movies this character is in:"
   films_hash.each do |film|
-    puts "#{film['title']}"
+    puts "   #{film['title']}"
   end
+  puts "*" * 30
 end
 
 
@@ -61,7 +64,7 @@ def show_character_movies(character)
 end
 
 def get_movie_crawl_text(movie)
-  puts movie
+  puts "*" * 30
   movie_info = get_info_hash_page('http://www.swapi.co/api/films/')
   movie_info["results"].each do |movie_hash|
     if movie_hash["title"] == movie
